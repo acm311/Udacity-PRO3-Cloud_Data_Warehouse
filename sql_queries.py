@@ -100,7 +100,7 @@ artist_table_create = ("""
         artist_id VARCHAR(300),
         name VARCHAR(300),
         location VARCHAR(300),
-        lattitude DOUBLE PRECISION,
+        latitude DOUBLE PRECISION,
         longitude DOUBLE PRECISION,
         PRIMARY KEY (artist_id)
     );
