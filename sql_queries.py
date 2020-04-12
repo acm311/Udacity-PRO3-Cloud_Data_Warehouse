@@ -187,7 +187,7 @@ song_table_insert = ("""
 """)
 
 artist_table_insert = ("""
-    INSERT INTO ARTTISTS (artist_id, name, location, latitude, longitude)
+    INSERT INTO ARTISTS (artist_id, name, location, latitude, longitude)
         SELECT DISTINCT
             artist_id,
             artist_name,
@@ -195,7 +195,7 @@ artist_table_insert = ("""
             artist_latitude,
             artist_longitude
         FROM STAGING_SONGS
-        WHERE artist_id NOT IN (SELECT DISTINCT artist_id FROM ARTTISTS)
+        WHERE artist_id NOT IN (SELECT DISTINCT artist_id FROM ARTISTS)
 
 """)
 
